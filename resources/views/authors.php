@@ -1,0 +1,1 @@
+<div class="pagehead"><h1>مؤلفین و زندگی‌نامه‌ها</h1><form><input name="q" value="<?=e($q)?>" placeholder="جستجوی مؤلف"><button>جستجو</button></form></div><div class="author-grid"><?php foreach($rows as $a):?><a href="/author?id=<?=$a['id']?>"><strong><?=e($a['name'])?></strong><small><?=number_format($a['books'])?> کتاب</small></a><?php endforeach;?></div>

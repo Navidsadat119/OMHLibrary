@@ -1,0 +1,1 @@
+<section class="reader-head"><a href="/book?id=<?=e($v['book_id'])?>">← بازگشت به کتاب</a><h1><?=e($v['title'])?> — جلد <?=e($v['volume_no'])?></h1></section><div class="pdf-reader"><iframe src="/uploads/<?=e($v['file_path'])?>#toolbar=1&navpanes=0" title="PDF Reader"></iframe></div>
