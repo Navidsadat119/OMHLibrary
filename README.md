@@ -1,56 +1,21 @@
 # OMH Library — کتابخانه عمرمختار هاشمی
 
-A deployable Laravel starter for the OMH Library project.
+نسخه Deploy-ready یک کتابخانه دیجیتال فارسی/عربی/پشتو/انگلیسی با ظاهر کلاسیک و شلوغ، جستجو، علوم چندسطحی، فنون درسی، کتاب‌های مکتب، مؤلفین، کتاب‌های چندجلدی، کتاب‌های ویژه، ارسال کتاب، دانلود/لینک خارجی و پنل مدیریت.
 
-## Included in this build
-- Classic OMH/Aqeedeh-inspired library UI
-- Home page and long library introduction
-- Three distinct public sections:
-  - علوم
-  - فنون درسی
-  - کتاب‌های مکتب
-- Books, authors, volumes, categories, tags
-- Commentary/annotation relationships
-- Featured books carousel
-- Search across books/authors/sciences
-- Book submission workflow
-- Admin-ready database structure
-- Persian/Arabic/Pashto/English UI foundation
-- Dark/light theme
-- Secure download endpoint
-- Seed data for immediate preview
+## راه‌اندازی محلی
+1. PostgreSQL بسازید و `.env` را از `.env.example` ایجاد کنید.
+2. `php database/migrate.php`
+3. `php database/seed.php`
+4. وب‌سرور را روی `public/` اجرا کنید.
 
-## Stack
-- PHP 8.2+
-- Laravel 11+
-- MySQL 8+ / MariaDB 10.6+
-- Blade
-- Vanilla JS/CSS
-- Vite
+## Render
+این پروژه Docker-ready است و `render.yaml` سرویس وب و PostgreSQL را تعریف می‌کند. بعد از ساخت سرویس، `APP_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` را تنظیم کنید. Build/Start توسط Docker انجام می‌شود.
 
-## Local setup
-```bash
-cp .env.example .env
-composer install
-php artisan key:generate
-php artisan migrate --seed
-npm install
-npm run build
-php artisan storage:link
-php artisan serve
-```
+## ورود مدیر
+از `ADMIN_EMAIL` و `ADMIN_PASSWORD` استفاده کنید. رمز اولیه را حتماً در Render تغییر دهید.
 
-## Deployment
-Set the web root/document root to `public/`, configure the database in `.env`, run:
-```bash
-composer install --no-dev --optimize-autoloader
-php artisan migrate --seed --force
-npm install
-npm run build
-php artisan storage:link
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-```
+## حقوق محتوا
+کاتالوگ اولیه فقط متادیتا/عنوان/طبقه‌بندی است. فایل‌های دارای حق نشر را بدون مجوز وارد پروژه نکنید؛ برای منابع خارجی می‌توان نام منبع و لینک قانونی را در پنل ثبت کرد.
 
-This repository is deliberately structured so PDF reader, OCR/search engine, PWA, queues, analytics and advanced admin modules can be added without replacing the core data model.
+## منابع الهام
+ساختار فهرست و موضوعات از الگوهای رایج کتابخانه‌های اسلامی الهام گرفته شده و کد/طراحی اختصاصی است. برای نمونه، کتابخانه عقیده دسته‌بندی موضوعی، فهرست کتاب‌ها و اطلاعات مؤلف را ارائه می‌کند؛ سایت‌های حنفی نیز مجموعه‌های کلاسیک و معاصر دارند.
