@@ -1,0 +1,1 @@
+const slider=document.querySelector('#featured');if(slider){let timer=setInterval(()=>{if(slider.matches(':hover'))return;slider.scrollBy({left:190,behavior:'smooth'});if(slider.scrollLeft+slider.clientWidth>=slider.scrollWidth-10)slider.scrollTo({left:0,behavior:'smooth'})},3500);slider.addEventListener('touchstart',()=>clearInterval(timer),{once:true})}
