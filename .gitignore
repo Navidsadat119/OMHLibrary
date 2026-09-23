@@ -1,7 +1,8 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/storage/*.key
-/storage/app/public/*
-/.env
-/vendor
+.env
+/vendor/
+/uploads/pdfs/*
+/uploads/submissions/*
+/uploads/covers/*
+/uploads/submission-covers/*
+/storage/*
+!storage/.gitkeep

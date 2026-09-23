@@ -4,6 +4,7 @@ services:
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
     envVars:
       - key: APP_ENV
         value: production
@@ -11,8 +12,6 @@ services:
         value: "false"
       - key: APP_URL
         sync: false
-      - key: APP_KEY
-        generateValue: true
       - key: DB_HOST
         fromDatabase:
           name: omh-library-db

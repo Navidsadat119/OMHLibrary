@@ -1,4 +1,5 @@
 .git
 .env
-storage/cache/*
-uploads/*
+vendor
+uploads/pdfs/*
+uploads/submissions/*
