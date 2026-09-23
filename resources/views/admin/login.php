@@ -1,0 +1,1 @@
+<div class="login"><h1>ورود مدیریت</h1><form method="post" action="/admin/login"><?=csrf_field()?><input type="email" name="email" placeholder="ایمیل مدیر" required><input type="password" name="password" placeholder="رمز عبور" required><button class="btn">ورود</button></form></div>

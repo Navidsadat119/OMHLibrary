@@ -1,0 +1,1 @@
+<div class="adminhead"><h1>تنظیمات</h1><a href="/admin">داشبورد</a></div><form class="formbox" method="post" action="/admin/settings"><?=csrf_field()?><?php foreach($rows as $r):?><label><?=e($r['key'])?><input name="settings[<?=e($r['key'])?>]" value="<?=e($r['value'])?>"></label><?php endforeach;?><button class="btn">ذخیره</button></form>

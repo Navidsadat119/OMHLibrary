@@ -1,0 +1,1 @@
+<div class="adminhead"><h1>کتاب‌های ویژه</h1><a href="/admin">داشبورد</a></div><form method="post"><?=csrf_field()?><div class="catchecks"><?php foreach($rows as $r):?><label><input type="checkbox" name="featured[]" value="<?=$r['id']?>" <?=($r['featured']?'checked':'')?>> <?=e($r['title'])?></label><?php endforeach;?></div><button class="btn">ذخیره انتخاب‌ها</button></form>
