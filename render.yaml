@@ -5,40 +5,50 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health
+
     envVars:
       - key: APP_ENV
         value: production
+
       - key: APP_DEBUG
         value: "false"
+
       - key: APP_URL
         sync: false
+
       - key: DB_HOST
         fromDatabase:
           name: omh-library-db
           property: host
+
       - key: DB_PORT
         fromDatabase:
           name: omh-library-db
           property: port
+
       - key: DB_DATABASE
         fromDatabase:
           name: omh-library-db
           property: database
+
       - key: DB_USERNAME
         fromDatabase:
           name: omh-library-db
           property: user
+
       - key: DB_PASSWORD
         fromDatabase:
           name: omh-library-db
           property: password
+
       - key: ADMIN_EMAIL
         sync: false
+
       - key: ADMIN_PASSWORD
         sync: false
-  - type: pserv
-    name: omh-library-db
-    runtime: postgres
+
+databases:
+  - name: omh-library-db
     plan: free
     databaseName: omh_library
     user: omh_admin
