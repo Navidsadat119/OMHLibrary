@@ -5,7 +5,7 @@ class App{
   $uri=rtrim(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH)?:'/','/')?:'/';$method=$_SERVER['REQUEST_METHOD'];
   $routes=[
    'GET /'=>fn()=>Controllers::home(),'GET /health'=>fn()=>Controllers::health(),'GET /lang'=>fn()=>Controllers::language(),
-   'GET /books'=>fn()=>Controllers::books(),'GET /book'=>fn()=>Controllers::book(),'GET /authors'=>fn()=>Controllers::authors(),'GET /author'=>fn()=>Controllers::author(),'GET /category'=>fn()=>Controllers::category(),'GET /search'=>fn()=>Controllers::search(),
+   'GET /books'=>fn()=>Controllers::books(),'GET /my-books'=>fn()=>Controllers::myBooks(),'GET /category-section'=>fn()=>Controllers::categorySection(),'GET /book'=>fn()=>Controllers::book(),'GET /authors'=>fn()=>Controllers::authors(),'GET /author'=>fn()=>Controllers::author(),'GET /category'=>fn()=>Controllers::category(),'GET /search'=>fn()=>Controllers::search(),
    'GET /submit'=>fn()=>Controllers::submitForm(),'POST /submit'=>fn()=>Controllers::submit(),'GET /track'=>fn()=>Controllers::track(),'POST /submission/edit'=>fn()=>Controllers::submissionEdit(),
    'GET /contact'=>fn()=>Controllers::contact(),'POST /feedback'=>fn()=>Controllers::feedback(),'GET /legal'=>fn()=>Controllers::legal(),'GET /sitemap.xml'=>fn()=>Controllers::sitemap(),'GET /robots.txt'=>fn()=>Controllers::robots(),'GET /download'=>fn()=>Controllers::download(),'GET /reader'=>fn()=>Controllers::reader(),
    'GET /admin'=>fn()=>Admin::dashboard(),'GET /admin/login'=>fn()=>Admin::loginForm(),'POST /admin/login'=>fn()=>Admin::login(),'POST /admin/logout'=>fn()=>Admin::logout(),
