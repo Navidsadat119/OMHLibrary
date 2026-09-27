@@ -63,3 +63,7 @@ php -S 127.0.0.1:8080 -t public
 
 ## بررسی قبل از انتشار
 تمام فایل‌های PHP پروژه با `php -l` بررسی شده‌اند. اجرای کامل migration/seed و HTTP واقعی نیاز به PostgreSQL و محیط Docker/Render دارد؛ این محیط محلی فاقد Docker و PostgreSQL است، بنابراین نتیجهٔ این دو مرحله بدون ادعای ساختگی گزارش می‌شود.
+
+
+## Islamic source directory
+The catalog includes 20 external Islamic/Hanafi source directories as links and source metadata. OMH Library does not automatically copy third-party copyrighted PDFs; book records may point to the original source, while locally hosted files require appropriate permission.
