@@ -1,0 +1,1 @@
+<div class="login"><h1>بازیابی رمز مدیریت</h1><p class="muted">ایمیل مدیر را وارد کنید تا لینک بازیابی به ایمیل مالک ارسال شود.</p><form method="post" action="/admin/forgot"><?=csrf_field()?><input type="email" name="email" required placeholder="ایمیل مدیر"><button class="btn">ارسال لینک بازیابی</button></form><p><a href="/admin/login">بازگشت به ورود</a></p></div>
