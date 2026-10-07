@@ -1,6 +1,6 @@
 # OMH Library — Production Final
 
-کتابخانه عمرمختار هاشمی — پروژه PHP 8.3 + PostgreSQL، آماده برای Docker/Render.
+کتابخانه عمرمختار هاشمی — پروژه PHP 8.3 + PostgreSQL/Supabase برای Web Server معمولی.
 
 ## راه‌اندازی محلی
 1. PHP 8.2+ و PostgreSQL داشته باشید.
@@ -9,8 +9,10 @@
 4. `php database/seed.php`
 5. وب‌سرور را روی `public/` قرار دهید.
 
-## Render
-`render.yaml` و `Dockerfile` آماده‌اند. سرویس PostgreSQL و Web Service را از Blueprint بسازید. متغیرهای `APP_URL`، `ADMIN_EMAIL` و `ADMIN_PASSWORD` را در Render وارد کنید.
+## استقرار نهایی: Web Server + Supabase
+این نسخه برای Blueprint/Render طراحی نشده است. پروژه را روی Apache یا Nginx + PHP 8.3 نصب کنید و PostgreSQL پروژه را در Supabase قرار دهید. ابتدا `supabase/schema.sql` را در SQL Editor اجرا کنید، سپس `.env` را با اطلاعات Supabase تنظیم کنید و یک‌بار `php database/migrate.php` و `php database/seed.php` را اجرا کنید.
+
+فایل‌های PDF و Cover در فایل‌سیستم سرور نگهداری می‌شوند و اطلاعات کتاب‌ها در Supabase PostgreSQL قرار می‌گیرد. فایل‌های حساس مانند `.env` نباید عمومی شوند.
 
 ## امکانات اصلی
 - صفحه اصلی کلاسیک OMH و رابط شلوغ/حرفه‌ای کتابخانه‌ای
@@ -22,7 +24,7 @@
 - PDF محلی و لینک خارجی با شمارش دانلود
 - پنل مدیریت، نقش‌های پایه، تنظیمات، منابع خارجی، سایت‌های مرتبط و بازخورد
 - CSRF، session سخت‌گیرانه، password hashing، محدودیت فایل و MIME validation
-- PostgreSQL، Docker، Health Check، Sitemap و Robots
+- PostgreSQL/Supabase، Sitemap و Robots
 - طراحی Responsive و حالت تاریک/روشن
 - زیرساخت اولیه برای ترجمه چندزبانه، نسخه‌بندی، آمار، مجموعه‌ها و منابع آینده
 
